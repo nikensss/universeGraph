@@ -5,27 +5,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Path to the Fundamental Theory of Physics</title>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
-
-  </style>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="p5/p5.min.js"></script>
-  <script src="classes/Connection.js"></script>
-  <script src="classes/Dot.js"></script>
-  <script src="classes/Santaolalla.js"></script>
-  <script src="sketch.js"></script>
+  <script defer src="classes/Connection.js"></script>
+  <script defer src="classes/Dot.js"></script>
+  <script defer src="classes/Santaolalla.js"></script>
+  <script defer src="sketch.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="container">
+  <div class="body-wrapper">
     <div id="canvas"></div>
-    <div class="controls">
-      <p>Total dots: </p>
-      <p id="total-dots"></p>
+    <div class="controls d-flex flex-column">
+      <p>Total dots: <span id="total-dots"></span></p>
       <form action="fundamental-physics" id="fundamental-physics">
         <fieldset>
           <legend>Fundamental physics</legend>
@@ -33,7 +29,29 @@
           <input type="submit" value="Graph iterations" id="submit-fundamental-physics" />
         </fieldset>
       </form>
-      <button id="clear" class="centered">Clear</button>
+      <div class="draw-settings mt-3">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for enabling edges" id="draw-edges" checked>
+            </div>
+          </div>
+          <div class="input-group-append flex-grow text-right">
+            <p class="input-group-text flex-grow text-right" id="basic-addon2">Enable edges</p>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox" aria-label="Checkbox for enabling tips" id="draw-tips" checked>
+            </div>
+          </div>
+          <div class="input-group-append flex-grow">
+            <span class="input-group-text flex-grow text-right" id="basic-addon2">Enable tips</span>
+          </div>
+        </div>
+      </div>
+      <button id="clear" class="centered btn btn-info mt-auto">Clear</button>
     </div>
   </div>
 </body>

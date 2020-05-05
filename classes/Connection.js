@@ -1,5 +1,5 @@
-let DRAW_EDGES = true;
-let DRAW_TIPS = true;
+let DRAW_EDGES = $('#draw-edges').is(':checked');
+let DRAW_TIPS = $('#draw-tips').is(':checked');
 
 class Connection {
   constructor(a, b, color) {

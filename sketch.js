@@ -24,23 +24,27 @@ function initialGraphState() {
 function htmlInit() {
   updateTotalDots();
 
-  const formFundamentalPhysics = document.getElementById('fundamental-physics');
-  formFundamentalPhysics.addEventListener('submit', (e) => e.preventDefault());
-  const fundamentalLoops = document.getElementById('amount-iterations');
-  const submitFundamentalPhysics = document.getElementById('submit-fundamental-physics');
-  submitFundamentalPhysics.addEventListener('click', (e) => {
-    javier.fundamentalLoop(fundamentalLoops.value);
+  $('#fundamental-physics').on('submit', (e) => e.preventDefault());
+  $('#submit-fundamental-physics').click((e) => {
+    javier.fundamentalLoop(+$('#amount-iterations').val());
     draw();
     updateTotalDots();
   });
 
-  const clear = document.getElementById('clear');
-  clear.addEventListener('click', () => restartGraph());
+  $('#clear').click(() => restartGraph());
+
+  $('#draw-edges').change(function () {
+    DRAW_EDGES = this.checked;
+    draw();
+  });
+  $('#draw-tips').change(function () {
+    DRAW_TIPS = this.checked;
+    draw();
+  });
 }
 
 function updateTotalDots() {
-  const totalDots = document.getElementById('total-dots');
-  totalDots.innerText = javier.dots.length;
+  $('#total-dots').text(javier.dots.length);
 }
 
 function draw() {
@@ -61,7 +65,7 @@ function keyPressed() {
       restartGraph();
       break;
     case 82:
-      document.getElementById('submit-fundamental-physics').click();
+      $('#submit-fundamental-physics').click();
       break;
   }
 }

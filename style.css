@@ -3,7 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-.container {
+.body-wrapper {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -16,8 +16,8 @@ body {
 .controls {
   width: 15%;
   padding: 3px;
-  margin: auto;
 }
+
 .controls form {
   display: flex;
   flex-direction: column;
@@ -46,4 +46,8 @@ body {
   margin: 12px auto;
   display: block;
   font-size: 2em;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
