@@ -1,15 +1,12 @@
-let DRAW_EDGES = $('#draw-edges').is(':checked');
-let DRAW_TIPS = $('#draw-tips').is(':checked');
-
 class Connection {
-  constructor(a, b, color) {
+  constructor(a, b, color = [0, 0, 0]) {
     if (!a || !b) {
       throw new Error('Insufficient arguments: start and end needed!');
     }
     this.start = a;
     this.end = b;
     this.arrowSize = 8;
-    this.color = color || [0, 0, 0];
+    this.color = color;
   }
 
   draw() {
@@ -19,6 +16,14 @@ class Connection {
   drawArrow() {
     if (DRAW_EDGES) this.drawEdge();
     if (DRAW_TIPS) this.drawTip();
+  }
+
+  isDrawEdges() {
+    return $('#draw-edges').is(':checked');
+  }
+
+  isDrawTips() {
+    return $('#draw-tips').is(':checked');
   }
 
   randomizeColor() {

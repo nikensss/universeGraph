@@ -33,14 +33,8 @@ function htmlInit() {
 
   $('#clear').click(() => restartGraph());
 
-  $('#draw-edges').change(function () {
-    DRAW_EDGES = this.checked;
-    draw();
-  });
-  $('#draw-tips').change(function () {
-    DRAW_TIPS = this.checked;
-    draw();
-  });
+  $('#draw-edges').change(() => draw());
+  $('#draw-tips').change(() => draw());
 }
 
 function updateTotalDots() {
