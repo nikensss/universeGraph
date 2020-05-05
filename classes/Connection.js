@@ -14,8 +14,8 @@ class Connection {
   }
 
   drawArrow() {
-    if (DRAW_EDGES) this.drawEdge();
-    if (DRAW_TIPS) this.drawTip();
+    if (this.isDrawEdges()) this.drawEdge();
+    if (this.isDrawTips()) this.drawTip();
   }
 
   isDrawEdges() {

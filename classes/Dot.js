@@ -1,8 +1,8 @@
 class Dot {
-  constructor(x, y, color) {
+  constructor(x, y, color = [0, 0, 0]) {
     this.x = x;
     this.y = y;
-    this.color = color || [0, 0, 0];
+    this.color = color;
     this.connections = [];
   }
 

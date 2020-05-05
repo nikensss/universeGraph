@@ -51,3 +51,16 @@ body {
 .flex-grow {
   flex-grow: 1;
 }
+
+label {
+  user-select: none;
+  background-color: var(--gray);
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+input[type='checkbox']:checked ~ label {
+  background-color: var(--success);
+}
