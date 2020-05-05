@@ -1,10 +1,10 @@
-let javier;
+let steven;
 
 function setup() {
   pixelDensity(1);
   const canvas = createCanvas(windowWidth * 0.85, windowHeight);
   canvas.parent('canvas');
-  javier = new Santaolalla(width, height);
+  steven = new Wolfram(width, height);
   background(180, 180, 180);
 
   htmlInit();
@@ -26,7 +26,7 @@ function htmlInit() {
 
   $('#fundamental-physics').on('submit', (e) => e.preventDefault());
   $('#submit-fundamental-physics').click((e) => {
-    javier.fundamentalLoop(+$('#amount-iterations').val());
+    steven.fundamentalLoop(+$('#amount-iterations').val());
     draw();
     updateTotalDots();
   });
@@ -44,17 +44,17 @@ function htmlInit() {
 }
 
 function updateTotalDots() {
-  $('#total-dots').text(javier.dots.length);
+  $('#total-dots').text(steven.dots.length);
 }
 
 function draw() {
   background(180, 180, 180);
-  javier.dots.forEach((d) => d.draw());
+  steven.dots.forEach((d) => d.draw());
 }
 
 function restartGraph() {
   background(180, 180, 180);
-  javier.restart();
+  steven.restart();
   updateTotalDots();
   draw();
 }

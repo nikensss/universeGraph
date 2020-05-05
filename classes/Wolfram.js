@@ -1,4 +1,4 @@
-class Santaolalla {
+class Wolfram {
   constructor(w, h) {
     this.w = w;
     this.h = h;
