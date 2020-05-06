@@ -34,8 +34,6 @@ class Connection {
     push();
     stroke(this.color);
     strokeWeight(1);
-    noFill();
-    //fill(this.color);
     line(this.start.x, this.start.y, this.end.x, this.end.y);
     pop();
   }

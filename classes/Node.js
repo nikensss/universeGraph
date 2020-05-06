@@ -1,4 +1,4 @@
-class Dot {
+class Node {
   constructor(x, y, color = [0, 0, 0]) {
     this.x = x;
     this.y = y;
@@ -8,9 +8,10 @@ class Dot {
 
   draw() {
     push();
-    stroke(this.color);
+    stroke('white');
     strokeWeight(1);
-    point(this.x, this.y);
+    fill(this.color);
+    circle(this.x, this.y, 5);
     pop();
     this.connections.forEach((c) => c.draw());
   }

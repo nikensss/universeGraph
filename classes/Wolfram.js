@@ -10,9 +10,9 @@ class Wolfram {
   }
 
   getInitialState() {
-    const a = new Dot(random(this.w), random(this.h));
-    const b = new Dot(random(this.w), random(this.h));
-    const c = new Dot(random(this.w), random(this.h));
+    const a = new Node(random(this.w), random(this.h));
+    const b = new Node(random(this.w), random(this.h));
+    const c = new Node(random(this.w), random(this.h));
     c.connect(a);
     c.connect(b);
 
@@ -48,7 +48,7 @@ class Wolfram {
     const x = a.start;
     const y = a.end;
     const z = b.end;
-    const w = new Dot(random(width), random(height), color);
+    const w = new Node(random(width), random(height), color);
     this.dots.push(w);
     a.end = w;
     a.color = color;

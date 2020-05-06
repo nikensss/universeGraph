@@ -13,9 +13,9 @@ function setup() {
 }
 
 function initialGraphState() {
-  const a = new Dot(width / 3, height / 2);
-  const b = new Dot((2 * width) / 3, height / 3);
-  const c = new Dot((2 * width) / 3, (2 * height) / 3);
+  const a = new Node(width / 3, height / 2);
+  const b = new Node((2 * width) / 3, height / 3);
+  const c = new Node((2 * width) / 3, (2 * height) / 3);
   dots = [a, b, c];
   c.connect(a);
   c.connect(b);
