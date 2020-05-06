@@ -23,24 +23,26 @@
 <body>
   <div class="body-wrapper">
     <div id="canvas"></div>
-    <div class="controls d-flex flex-column">
-      <p>Total dots: <span id="total-dots"></span></p>
-      <form action="fundamental-physics" id="fundamental-physics" class="mb-3">
+    <div class="controls d-flex flex-column mx-4">
+      <p>Total nodes: <span id="total-nodes"></span></p>
+      <form action="fundamental-physics" id="fundamental-physics" class="">
         <fieldset>
           <legend>Fundamental physics</legend>
-          <input type="number" name="amount-iterations" id="amount-iterations" value="1" />
-          <input type="submit" value="Graph iterations" id="submit-fundamental-physics" />
+          <input type="number" name="amount-iterations" id="amount-iterations" value="1" class="rounded" />
+          <input type="submit" value="Graph iterations" id="submit-fundamental-physics" class="btn btn-info rounded w-100" />
         </fieldset>
       </form>
+      <hr>
       <div class="edges text-center mb-3">
         <input type="checkbox" name="draw-edges" id="draw-edges" hidden checked>
-        <label for="draw-edges" class="rounded py-2 px-5">Draw edges</label>
+        <label for="draw-edges" class="rounded px-5 py-2 w-100">Draw edges</label>
       </div>
-      <div class="tips text-center mb-3">
+      <div class="tips text-center">
         <input type="checkbox" name="draw-tips" id="draw-tips" hidden checked>
-        <label for="draw-tips" class="rounded py-2 px-5">Draw tips</label>
+        <label for="draw-tips" class="rounded px-5 py-2 w-100">Draw tips</label>
       </div>
-      <button id="clear" class="centered btn btn-info mt-auto">Clear</button>
+      <hr>
+      <button id="clear" class="mt-auto centered btn btn-info w-100">Clear</button>
     </div>
   </div>
 </body>

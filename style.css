@@ -64,3 +64,11 @@ label:hover {
 input[type='checkbox']:checked ~ label {
   background-color: var(--success);
 }
+
+hr {
+  width: 100%;
+  height: 3px;
+  background-color: dodgerblue;
+  border-radius: 9999px;
+  margin: 2.2em 0;
+}

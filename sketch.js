@@ -22,13 +22,13 @@ function initialGraphState() {
 }
 
 function htmlInit() {
-  updateTotalDots();
+  updateTotalNodes();
 
   $('#fundamental-physics').on('submit', (e) => e.preventDefault());
   $('#submit-fundamental-physics').click((e) => {
     steven.fundamentalLoop(+$('#amount-iterations').val());
     draw();
-    updateTotalDots();
+    updateTotalNodes();
   });
 
   $('#clear').click(() => restartGraph());
@@ -37,8 +37,8 @@ function htmlInit() {
   $('#draw-tips').change(() => draw());
 }
 
-function updateTotalDots() {
-  $('#total-dots').text(steven.dots.length);
+function updateTotalNodes() {
+  $('#total-nodes').text(steven.dots.length);
 }
 
 function draw() {
@@ -49,7 +49,7 @@ function draw() {
 function restartGraph() {
   background(180, 180, 180);
   steven.restart();
-  updateTotalDots();
+  updateTotalNodes();
   draw();
 }
 
